@@ -13,3 +13,16 @@ export declare type Task = {
   dueDate: string;
   isComplete: boolean;
 };
+
+export declare type Theme = {
+  dark: boolean;
+  colors: {
+    primary: string;
+    secondary: string;
+    background: string;
+    card: string;
+    cardShadow: string;
+    text: string;
+    borderColor: string;
+  };
+};

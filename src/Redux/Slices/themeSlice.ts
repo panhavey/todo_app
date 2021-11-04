@@ -1,12 +1,13 @@
 import {lightTheme, darkTheme} from './../../Constants/theme';
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {Theme} from '../../Constants/types';
 
 const themeSlice = createSlice({
   name: 'theme',
-  initialState: lightTheme,
+  initialState: lightTheme as Theme,
   reducers: {
-    switchTheme: state => {
-      return state.dark ? lightTheme : darkTheme;
+    switchTheme: (state, {payload}: PayloadAction<Theme>) => {
+      return payload;
     },
   },
 });
